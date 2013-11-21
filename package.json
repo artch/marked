@@ -15,7 +15,9 @@
   "devDependencies": {
     "markdown": "*",
     "showdown": "*",
-    "robotskirt": "*"
+    "robotskirt": "*",
+    "grunt-contrib-copy": "*",
+    "grunt-contrib-uglify": "*"
   },
   "scripts": { "test": "node test", "bench": "node test --bench" }
 }
