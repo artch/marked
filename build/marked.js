@@ -932,9 +932,9 @@ Parser.prototype.tok = function() {
         body += this.tok();
       }
 
-      return '<blockquote>\n'
+      return this.options.blockquotes ? '<blockquote>\n'
         + body
-        + '</blockquote>\n';
+        + '</blockquote>\n' : '';
     }
     case 'list_start': {
       var type = this.token.ordered ? 'ol' : 'ul'
@@ -1152,7 +1152,8 @@ marked.defaults = {
   headings: true,
   paragraph: true,
   lists: true,
-  hr: true
+  hr: true,
+  blockquotes: true
 };
 
 /**
