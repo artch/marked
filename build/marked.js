@@ -654,9 +654,9 @@ InlineLexer.prototype.output = function(src) {
     // code
     if (cap = this.rules.code.exec(src)) {
       src = src.substring(cap[0].length);
-      out += '<code>'
+      out += this.options.code ? '<code>'
         + escape(cap[2], true)
-        + '</code>';
+        + '</code>' : escape(cap[2], true);
       continue;
     }
 
