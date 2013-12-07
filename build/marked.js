@@ -27,7 +27,7 @@ var block = {
   text: /^[^\n]+/
 };
 
-block.bullet = /(?:[*+-]|\d+\.)/;
+block.bullet = /(?:[*-]|\d+\.)/;
 block.item = /^( *)(bull) [^\n]*(?:\n(?!\1bull )[^\n]*)*/;
 block.item = replace(block.item, 'gm')
   (/bull/g, block.bullet)
@@ -1153,7 +1153,8 @@ marked.defaults = {
   paragraph: true,
   lists: true,
   hr: true,
-  blockquotes: true
+  blockquotes: true,
+  code: true
 };
 
 /**
